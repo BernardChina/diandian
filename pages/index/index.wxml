@@ -6,18 +6,19 @@
 
 <view class='contentd'>
   <view wx:for="{{videosModel}}" wx:for-index="idx" wx:for-item="itemName" bindtap='goToDetail' class='content-block'>
-    <view class='content-img-view'>
-      <view class='content-conver-view'>
+    <view class='content-img-view' catchtap='videoTap'>
+      <!-- <view class='content-conver-view'>
       </view>
-      <image class='content-cover-img' src='../resource/MediaPlay.png'></image>
-      <image class='img' src='{{itemName.poster}}' mode='widthFix'></image>
+      <image class='content-cover-img' src='../resource/MediaPlay.png'></image> -->
+      <!-- <image class='img' src='{{itemName.poster}}' mode='widthFix'></image> -->
+      <video class='videos' id="myVideo" src="{{itemName.src}}" poster="{{itemName.poster}}" controls></video>
     </view>
     <view class='title-view'>
       <text class='content-text-title'>{{itemName.title}}</text>
       <view class='tag-view'>
         <image class='img-enjoy' src='../resource/Data-Export.png'></image>
         <text class='enjoy-num'></text>
-        <image class='img-enjoy' src='../resource/Messaging.png'></image>
+        <image class='img-enjoy' src='../resource/Message.png'></image>
         <text class='enjoy-num'>{{itemName.commentNum}}</text>
         <image class='img-enjoy' src='../resource/Heart.png'></image>
         <text class='enjoy-num'>{{itemName.loveNum}}</text>
