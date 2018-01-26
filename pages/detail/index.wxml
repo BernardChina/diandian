@@ -16,8 +16,7 @@
     <view class='line'>
     </view>
   </view>
-  <view style=' flex: 1;z-index: 8; '>
-    <scroll-view scroll-y class='scrollView-detail'>
+  <scroll-view scroll-y class='scrollView-detail'>
       <text class='content-text-des'>在使用 ReactNative开发中我们熟练的采用 JavaScript的方式发送请求的方式发送一个请求到服务端</text>
       <text class='content-text-tag'># 亲子 / 2018-01-22</text>
       <view class='line'>
@@ -85,5 +84,4 @@
       <view class='line'></view>
 
     </scroll-view>
-  </view>
 </view>

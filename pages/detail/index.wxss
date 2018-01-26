@@ -1,19 +1,20 @@
 /* pages/Detail/index.wxss */
+
 page {
   height: 100%;
 }
+
 .detail-body {
-  display: -webkit-flex; /* Safari */
-  display: flex;
-  flex-direction: column; 
+  /* display: flex;
+  flex-direction: column;  */
   min-height: 100%;
 }
 
 .detailContainer {
   background-color: white;
   flex: 0;
-   position: fixed;
-   top: 0;  
+  position: fixed;
+  top: 0;
   z-index: 9;
   width: 100%;
   height: 257px;
@@ -27,7 +28,7 @@ page {
 .title-view {
   width: 100%;
   height: 48px;
-   display: table; 
+  display: table;
 }
 
 .content-text-title {
@@ -105,8 +106,14 @@ page {
 
 .scrollView-detail {
   width: 100%;
-  height: 300px;
-  margin-top: 258px;
+  position: fixed;
+  top: 257px;
+  bottom: 0;
+  box-sizing: border-box;
+  /* height: 70vh; */
+  line-height: 2;
+  /* height: 300px;
+  margin-top: 258px; */
 }
 
 .scrollView-detail-x {
