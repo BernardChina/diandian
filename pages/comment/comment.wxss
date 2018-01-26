@@ -1,0 +1,13 @@
+/* pages/comment/comment.wxss */
+
+.comment-input {
+  display: block;
+  width: 100%;
+  margin-top: 15px;
+  height: 200px;
+  border: 1px solid #999;
+}
+
+.comment-button {
+  margin-top: 15px;
+}

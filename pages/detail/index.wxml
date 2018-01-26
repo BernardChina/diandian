@@ -7,7 +7,7 @@
       <view class='tag-view'>
         <image class='img-enjoy' src='../resource/Data-Export.png' bindtap='shareTap'></image>
         <text class='enjoy-num'></text>
-        <image class='img-enjoy' src='../resource/Messaging.png'></image>
+        <image class='img-enjoy' src='../resource/message01.png' bindtap='messageTap'></image>
         <text class='enjoy-num'>10</text>
         <image class='img-enjoy' src='../resource/Heart.png'></image>
         <text class='enjoy-num'>10</text>
