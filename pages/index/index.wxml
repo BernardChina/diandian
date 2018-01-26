@@ -11,7 +11,7 @@
       <view class='content-conver-view'>
       </view>
       <image class='content-cover-img' src='../resource/MediaPlay.png'></image>
-      <image class='img' src='../resource/0.jpg' mode='scaleToFill'></image>
+      <image class='img' src='../resource/0.jpg' mode='widthFix'></image>
     </view>
     <view class='title-view'>
       <text class='content-text-title'>使用小秘籍</text>
@@ -36,7 +36,7 @@
       <view class='content-conver-view'>
       </view>
       <image class='content-cover-img' src='../resource/MediaPlay.png'></image>
-      <image class='img' src='../resource/0.jpg' mode='scaleToFill'></image>
+      <image class='img' src='../resource/0.jpg' mode='widthFix'></image>
     </view>
     <view class='title-view'>
       <text class='content-text-title'>使用小秘籍</text>
@@ -61,7 +61,7 @@
       <view class='content-conver-view'>
       </view>
       <image class='content-cover-img' src='../resource/MediaPlay.png'></image>
-      <image class='img' src='../resource/0.jpg' mode='scaleToFill'></image>
+      <image class='img' src='../resource/0.jpg' mode='widthFix'></image>
     </view>
     <view class='title-view'>
       <text class='content-text-title'>使用小秘籍</text>

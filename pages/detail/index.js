@@ -64,5 +64,14 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  shareTap: function () {
+    wx.showToast({
+      title: '请点击右上角进行分享',
+      icon: 'none',
+      duration: 2000
+    })
   }
+
 })

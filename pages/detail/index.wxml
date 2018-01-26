@@ -5,7 +5,7 @@
     <view class='title-view'>
       <text class='content-text-title'>使用小秘籍</text>
       <view class='tag-view'>
-        <image class='img-enjoy' src='../resource/Data-Export.png'></image>
+        <image class='img-enjoy' src='../resource/Data-Export.png' bindtap='shareTap'></image>
         <text class='enjoy-num'></text>
         <image class='img-enjoy' src='../resource/Messaging.png'></image>
         <text class='enjoy-num'>10</text>
@@ -17,71 +17,71 @@
     </view>
   </view>
   <scroll-view scroll-y class='scrollView-detail'>
-      <text class='content-text-des'>在使用 ReactNative开发中我们熟练的采用 JavaScript的方式发送请求的方式发送一个请求到服务端</text>
-      <text class='content-text-tag'># 亲子 / 2018-01-22</text>
-      <view class='line'>
+    <text class='content-text-des'>在使用 ReactNative开发中我们熟练的采用 JavaScript的方式发送请求的方式发送一个请求到服务端</text>
+    <text class='content-text-tag'># 亲子 / 2018-01-22</text>
+    <view class='line'>
+    </view>
+    <view class='title-view'>
+      <view style='display: table-cell;vertical-align: middle;padding-left:15px;width:10%;'>
+        <image class='img-enjoy' src='../resource/People.png'></image>
       </view>
-      <view class='title-view'>
-        <view style='display: table-cell;vertical-align: middle;padding-left:15px;width:10%;'>
-          <image class='img-enjoy' src='../resource/People.png'></image>
+      <text class='content-text-title-small'>相关视频</text>
+    </view>
+    <scroll-view scroll-x class='scrollView-detail-x'>
+      <view class='content-img-view'>
+        <view class='content-conver-view'>
         </view>
-        <text class='content-text-title-small'>相关视频</text>
+        <image class='content-cover-img' src='../resource/MediaPlay.png'></image>
+        <image class='video-img' src='../resource/0.jpg' mode='scaleToFill'></image>
       </view>
-      <scroll-view scroll-x class='scrollView-detail-x'>
-        <view class='content-img-view'>
-          <view class='content-conver-view'>
-          </view>
-          <image class='content-cover-img' src='../resource/MediaPlay.png'></image>
-          <image class='video-img' src='../resource/0.jpg' mode='scaleToFill'></image>
+      <view class='content-img-view'>
+        <view class='content-conver-view'>
         </view>
-        <view class='content-img-view'>
-          <view class='content-conver-view'>
-          </view>
-          <image class='content-cover-img' src='../resource/MediaPlay.png'></image>
-          <image class='video-img' src='../resource/0.jpg' mode='scaleToFill'></image>
+        <image class='content-cover-img' src='../resource/MediaPlay.png'></image>
+        <image class='video-img' src='../resource/0.jpg' mode='scaleToFill'></image>
+      </view>
+      <view class='content-img-view'>
+        <view class='content-conver-view'>
         </view>
-        <view class='content-img-view'>
-          <view class='content-conver-view'>
-          </view>
-          <image class='content-cover-img' src='../resource/MediaPlay.png'></image>
-          <image class='video-img' src='../resource/0.jpg' mode='scaleToFill'></image>
-        </view>
-      </scroll-view>
-
-      <view class='title-view'>
-        <view style='display: table-cell;vertical-align: middle;padding-left:15px;width:10%;'>
-          <image class='img-enjoy' src='../resource/Message.png'></image>
-        </view>
-        <text class='content-text-title-small'>相关评论</text>
+        <image class='content-cover-img' src='../resource/MediaPlay.png'></image>
+        <image class='video-img' src='../resource/0.jpg' mode='scaleToFill'></image>
       </view>
-      <view class='line'>
-      </view>
-
-      <view style='width:100%;height:48px;display:table;'>
-        <image src='../resource/Close.png' style='width:30px;height:30px; display:table-cell;padding:10px;'></image>
-        <view style='display:table-cell;vertical-align: middle;'>
-          <text style='font-size:11px;color:#999999;width:100%;margin:0;display:table-row;'>晒衣的交</text>
-          <text style='font-size:8px;color:#999999;margin:0;display:table-row;'>9楼 1小时前</text>
-        </view>
-
-      </view>
-      <view style=' margin-left:45px;margin-right:15px;margin-bottom:10px;'>
-        <text style='font-size:12px; '>你得做些额外工作来让IE6和IE7支持 inline-block 。有些时候人们谈到 inline-block 会触发叫做 hasLayout 的东西，你只需要知道那是用来支持旧浏览器的。如果你对此很感兴趣，可以在前面那个链接中找到更详细的信息。否则我们就继续下去吧</text>
-      </view>
-      <view class='line'></view>
-
-      <view style='width:100%;height:48px;display:table;'>
-        <image src='../resource/Close.png' style='width:30px;height:30px; display:table-cell;padding:10px;'></image>
-        <view style='display:table-cell;vertical-align: middle;'>
-          <text style='font-size:11px;color:#999999;width:100%;margin:0;display:table-row;'>晒衣的交</text>
-          <text style='font-size:8px;color:#999999;margin:0;display:table-row;'>9楼 1小时前</text>
-        </view>
-
-      </view>
-      <view style=' margin-left:45px;margin-right:15px;margin-bottom:10px;'>
-        <text style='font-size:12px; '>你得做些额外工作来让IE6和IE7支持 inline-block 。有些时候人们谈到 inline-block 会触发叫做 hasLayout 的东西，你只需要知道那是用来支持旧浏览器的。如果你对此很感兴趣，可以在前面那个链接中找到更详细的信息。否则我们就继续下去吧</text>
-      </view>
-      <view class='line'></view>
-
     </scroll-view>
+
+    <view class='title-view'>
+      <view style='display: table-cell;vertical-align: middle;padding-left:15px;width:10%;'>
+        <image class='img-enjoy' src='../resource/Message.png'></image>
+      </view>
+      <text class='content-text-title-small'>相关评论</text>
+    </view>
+    <view class='line'>
+    </view>
+
+    <view style='width:100%;height:48px;display:table;'>
+      <image src='../resource/Close.png' style='width:30px;height:30px; display:table-cell;padding:10px;'></image>
+      <view style='display:table-cell;vertical-align: middle;'>
+        <text style='font-size:11px;color:#999999;width:100%;margin:0;display:table-row;'>晒衣的交</text>
+        <text style='font-size:8px;color:#999999;margin:0;display:table-row;'>9楼 1小时前</text>
+      </view>
+
+    </view>
+    <view style=' margin-left:45px;margin-right:15px;margin-bottom:10px;'>
+      <text style='font-size:12px; '>你得做些额外工作来让IE6和IE7支持 inline-block 。有些时候人们谈到 inline-block 会触发叫做 hasLayout 的东西，你只需要知道那是用来支持旧浏览器的。如果你对此很感兴趣，可以在前面那个链接中找到更详细的信息。否则我们就继续下去吧</text>
+    </view>
+    <view class='line'></view>
+
+    <view style='width:100%;height:48px;display:table;'>
+      <image src='../resource/Close.png' style='width:30px;height:30px; display:table-cell;padding:10px;'></image>
+      <view style='display:table-cell;vertical-align: middle;'>
+        <text style='font-size:11px;color:#999999;width:100%;margin:0;display:table-row;'>晒衣的交</text>
+        <text style='font-size:8px;color:#999999;margin:0;display:table-row;'>9楼 1小时前</text>
+      </view>
+
+    </view>
+    <view style=' margin-left:45px;margin-right:15px;margin-bottom:10px;'>
+      <text style='font-size:12px; '>你得做些额外工作来让IE6和IE7支持 inline-block 。有些时候人们谈到 inline-block 会触发叫做 hasLayout 的东西，你只需要知道那是用来支持旧浏览器的。如果你对此很感兴趣，可以在前面那个链接中找到更详细的信息。否则我们就继续下去吧</text>
+    </view>
+    <view class='line'></view>
+
+  </scroll-view>
 </view>
