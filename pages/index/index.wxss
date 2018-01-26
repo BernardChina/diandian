@@ -72,10 +72,15 @@
   margin-left: 15px;
   margin-right: 15px;
   font-size: 13px;
-  display: block;
   color: #afafaf;
   line-height: 1.5;
   margin-top: 15px;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
 }
 
 .content-text-tag {
