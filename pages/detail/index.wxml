@@ -1,24 +1,24 @@
 <!--pages/Detail/index.wxml-->
 <view class='detail-body'>
   <view class='detailContainer'>
-    <video class='videos' id="myVideo" src="http://ws.stream.qqmusic.qq.com/M500001VfvsJ21xFqb.mp3?guid=ffffffff82def4af4b12b3cd9337d5e7&uin=346897220&vkey=6292F51E1E384E06DCBDC9AB7C49FD713D632D313AC4858BACB8DDD29067D3C601481D36E62053BF8DFEAF74C0A5CCFADD6471160CAF3E6A&fromtag=46"></video>
+    <video class='videos' id="myVideo" src="{{videoModel.src}}" poster="{{videoModel.poster}}" controls></video>
     <view class='title-view'>
-      <text class='content-text-title'>使用小秘籍</text>
+      <text class='content-text-title'>{{baseModel.title}}</text>
       <view class='tag-view'>
         <image class='img-enjoy' src='../resource/Data-Export.png' bindtap='shareTap'></image>
         <text class='enjoy-num'></text>
-        <image class='img-enjoy' src='../resource/message01.png' bindtap='messageTap'></image>
-        <text class='enjoy-num'>10</text>
-        <image class='img-enjoy' src='../resource/Heart.png'></image>
-        <text class='enjoy-num'>10</text>
+        <image class='img-enjoy' src='../resource/Message.png' bindtap='messageTap'></image>
+        <text class='enjoy-num'>{{propertyModel.commentNum}}</text>
+        <image class='img-enjoy' src='../resource/Heart.png' bindtap='heartTap'></image>
+        <text class='enjoy-num'>{{propertyModel.loveNum}}</text>
       </view>
     </view>
     <view class='line'>
     </view>
   </view>
   <scroll-view scroll-y class='scrollView-detail'>
-    <text class='content-text-des'>在使用 ReactNative开发中我们熟练的采用 JavaScript的方式发送请求的方式发送一个请求到服务端</text>
-    <text class='content-text-tag'># 亲子 / 2018-01-22</text>
+    <text class='content-text-des'>{{baseModel.des}}</text>
+    <text class='content-text-tag'># {{baseModel.tag}} / {{baseModel.upTime}}</text>
     <view class='line'>
     </view>
     <view class='title-view'>
@@ -28,23 +28,11 @@
       <text class='content-text-title-small'>相关视频</text>
     </view>
     <scroll-view scroll-x class='scrollView-detail-x'>
-      <view class='content-img-view'>
+      <view wx:for="{{relativeVideosModel}}" wx:for-index="idx" wx:for-item="itemName" class='content-img-view'>
         <view class='content-conver-view'>
         </view>
         <image class='content-cover-img' src='../resource/MediaPlay.png'></image>
-        <image class='video-img' src='../resource/0.jpg' mode='scaleToFill'></image>
-      </view>
-      <view class='content-img-view'>
-        <view class='content-conver-view'>
-        </view>
-        <image class='content-cover-img' src='../resource/MediaPlay.png'></image>
-        <image class='video-img' src='../resource/0.jpg' mode='scaleToFill'></image>
-      </view>
-      <view class='content-img-view'>
-        <view class='content-conver-view'>
-        </view>
-        <image class='content-cover-img' src='../resource/MediaPlay.png'></image>
-        <image class='video-img' src='../resource/0.jpg' mode='scaleToFill'></image>
+        <image class='video-img' src='{{itemName.poster}}' mode='scaleToFill'></image>
       </view>
     </scroll-view>
 
@@ -57,7 +45,23 @@
     <view class='line'>
     </view>
 
-    <view style='width:100%;height:48px;display:table;'>
+    <view wx:for="{{commentsModel}}" wx:for-index="idx" wx:for-item="itemName">
+      <view style='width:100%;height:48px;display:table;'>
+        <image src='{{itemName.avatar}}' style='width:30px;height:30px; display:table-cell;padding:10px;'></image>
+        <view style='display:table-cell;vertical-align: middle;'>
+          <text style='font-size:11px;color:#999999;width:100%;margin:0;display:table-row;'>{{itemName.name}}</text>
+          <text style='font-size:8px;color:#999999;margin:0;display:table-row;'>{{idx}}楼 {{itemName.time}}</text>
+        </view>
+
+      </view>
+      <view style=' margin-left:45px;margin-right:15px;margin-bottom:10px;'>
+        <text style='font-size:12px; '>{{itemName.des}}</text>
+      </view>
+      <view class='line'></view>
+    </view>
+
+
+    <!-- <view style='width:100%;height:48px;display:table;'>
       <image src='../resource/Close.png' style='width:30px;height:30px; display:table-cell;padding:10px;'></image>
       <view style='display:table-cell;vertical-align: middle;'>
         <text style='font-size:11px;color:#999999;width:100%;margin:0;display:table-row;'>晒衣的交</text>
@@ -68,20 +72,7 @@
     <view style=' margin-left:45px;margin-right:15px;margin-bottom:10px;'>
       <text style='font-size:12px; '>你得做些额外工作来让IE6和IE7支持 inline-block 。有些时候人们谈到 inline-block 会触发叫做 hasLayout 的东西，你只需要知道那是用来支持旧浏览器的。如果你对此很感兴趣，可以在前面那个链接中找到更详细的信息。否则我们就继续下去吧</text>
     </view>
-    <view class='line'></view>
-
-    <view style='width:100%;height:48px;display:table;'>
-      <image src='../resource/Close.png' style='width:30px;height:30px; display:table-cell;padding:10px;'></image>
-      <view style='display:table-cell;vertical-align: middle;'>
-        <text style='font-size:11px;color:#999999;width:100%;margin:0;display:table-row;'>晒衣的交</text>
-        <text style='font-size:8px;color:#999999;margin:0;display:table-row;'>9楼 1小时前</text>
-      </view>
-
-    </view>
-    <view style=' margin-left:45px;margin-right:15px;margin-bottom:10px;'>
-      <text style='font-size:12px; '>你得做些额外工作来让IE6和IE7支持 inline-block 。有些时候人们谈到 inline-block 会触发叫做 hasLayout 的东西，你只需要知道那是用来支持旧浏览器的。如果你对此很感兴趣，可以在前面那个链接中找到更详细的信息。否则我们就继续下去吧</text>
-    </view>
-    <view class='line'></view>
+    <view class='line'></view> -->
 
   </scroll-view>
 </view>

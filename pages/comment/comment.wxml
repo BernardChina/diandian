@@ -1,6 +1,5 @@
 <!--pages/comment/comment.wxml-->
 <view style='margin-left:15px; margin-right:15px;'>
-<textarea class='comment-input' maxlength='200'  auto-focus show-confirm-bar bindconfirm='comfirm' />
-<button class='comment-button' type="default" size="default" bindtap="default" bindtap='comfirm' > 提交 </button>
+  <textarea class='comment-input' maxlength='200' auto-focus show-confirm-bar bindconfirm='comfirm' />
+  <button class='comment-button' type="default" size="default" bindtap="default" bindtap='comfirm'> 提交 </button>
 </view>
-
