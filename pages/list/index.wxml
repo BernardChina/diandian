@@ -1,0 +1,56 @@
+<!--pages/list/index.wxml-->
+<!--index.wxml-->
+<view class='header'>
+  <text class='header-title'>Hi, BernardChina</text>
+  <text class='header-des'>欢迎来到xxx</text>
+</view>
+<view class='contentd'>
+  <view bindtap='goToDetail' class='content-block'>
+    <view class='content-img-view'>
+      <view class='content-conver-view'>
+      </view>
+      <image class='content-cover-img' src='../resource/MediaPlay.png'></image>
+      <image class='img' src='../resource/1024.png' mode='scaleToFill'></image>
+    </view>
+    <text class='content-text-title'>使用小秘籍使用小秘籍</text>
+    <text class='content-text-des'>在使用 ReactNative开发中我们熟练的采用 JavaScript的方式发送请求的方式发送一个请求到服务端</text>
+    <text class='content-text-tag'># 亲子 / 2018-01-22</text>
+    <view class='enjoy-view'>
+      <image class='img-enjoy' src='../resource/enjoy.png'></image>
+      <text class='enjoy-num'>100</text>
+    </view>
+
+  </view>
+
+  <view class='content-block'>
+    <view class='content-img-view'>
+      <view class='content-conver-view'>
+      </view>
+      <image class='content-cover-img' src='../resource/MediaPlay.png'></image>
+      <image class='img' src='../resource/1024.png' mode='scaleToFill'></image>
+    </view>
+    <text class='content-text-title'>使用小秘籍使用小秘籍</text>
+    <text class='content-text-des'>在使用 ReactNative开发中我们熟练的采用 JavaScript的方式发送请求的方式发送一个请求到服务端</text>
+    <text class='content-text-tag'># 亲子 / 2018-01-22</text>
+    <view class='enjoy-view'>
+      <image class='img-enjoy' src='../resource/enjoy.png'></image>
+      <text class='enjoy-num'>100</text>
+    </view>
+  </view>
+
+  <view class='content-block'>
+    <view class='content-img-view'>
+      <view class='content-conver-view'>
+      </view>
+      <image class='content-cover-img' src='../resource/MediaPlay.png'></image>
+      <image class='img' src='../resource/0.jpg' mode='scaleToFill'></image>
+    </view>
+    <text class='content-text-title'>使用小秘籍使用小秘籍</text>
+    <text class='content-text-des'>在使用 ReactNative开发中我们熟练的采用 JavaScript的方式发送请求的方式发送一个请求到服务端</text>
+    <text class='content-text-tag'># 亲子 / 2018-01-22</text>
+    <view class='enjoy-view'>
+      <image class='img-enjoy' src='../resource/enjoy.png'></image>
+      <text class='enjoy-num'>100</text>
+    </view>
+  </view>
+</view>

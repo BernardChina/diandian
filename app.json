@@ -1,0 +1,32 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/detail/index",
+    "pages/list/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "哈哈",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#fff"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "pages/resource/homeDisable.png",
+        "selectedIconPath": "pages/resource/homeEnable.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "点点聊",
+        "iconPath": "pages/resource/chatDisable.png",
+        "selectedIconPath": "pages/resource/chatEnable.png"
+      }
+    ],
+    "position": "bottom"
+  }
+}

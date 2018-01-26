@@ -1,0 +1,84 @@
+<!--index.wxml-->
+<view class='header'>
+  <text class='header-title'>Hi, BernardChina</text>
+  <text class='header-des'>欢迎来到xxx</text>
+</view>
+
+<view class='contentd'>
+
+  <view bindtap='goToDetail' class='content-block'>
+    <view class='content-img-view'>
+      <view class='content-conver-view'>
+      </view>
+      <image class='content-cover-img' src='../resource/MediaPlay.png'></image>
+      <image class='img' src='../resource/0.jpg' mode='scaleToFill'></image>
+    </view>
+    <view class='title-view'>
+      <text class='content-text-title'>使用小秘籍</text>
+      <view class='tag-view'>
+        <image class='img-enjoy' src='../resource/Data-Export.png'></image>
+        <text class='enjoy-num'></text>
+        <image class='img-enjoy' src='../resource/Messaging.png'></image>
+        <text class='enjoy-num'>10</text>
+        <image class='img-enjoy' src='../resource/Heart.png'></image>
+        <text class='enjoy-num'>10</text>
+      </view>
+    </view>
+
+    <view class='line'>
+    </view>
+    <text class='content-text-des'>在使用 ReactNative开发中我们熟练的采用 JavaScript的方式发送请求的方式发送一个请求到服务端</text>
+    <text class='content-text-tag'># 亲子 / 2018-01-22</text>
+  </view>
+
+  <view bindtap='goToDetail' class='content-block'>
+    <view class='content-img-view'>
+      <view class='content-conver-view'>
+      </view>
+      <image class='content-cover-img' src='../resource/MediaPlay.png'></image>
+      <image class='img' src='../resource/0.jpg' mode='scaleToFill'></image>
+    </view>
+    <view class='title-view'>
+      <text class='content-text-title'>使用小秘籍</text>
+      <view class='tag-view'>
+        <image class='img-enjoy' src='../resource/Data-Export.png'></image>
+        <text class='enjoy-num'></text>
+        <image class='img-enjoy' src='../resource/Messaging.png'></image>
+        <text class='enjoy-num'>10</text>
+        <image class='img-enjoy' src='../resource/Heart.png'></image>
+        <text class='enjoy-num'>10</text>
+      </view>
+    </view>
+
+    <view class='line'>
+    </view>
+    <text class='content-text-des'>在使用 ReactNative开发中我们熟练的采用 JavaScript的方式发送请求的方式发送一个请求到服务端</text>
+    <text class='content-text-tag'># 亲子 / 2018-01-22</text>
+  </view>
+
+  <view bindtap='goToDetail' class='content-block'>
+    <view class='content-img-view'>
+      <view class='content-conver-view'>
+      </view>
+      <image class='content-cover-img' src='../resource/MediaPlay.png'></image>
+      <image class='img' src='../resource/0.jpg' mode='scaleToFill'></image>
+    </view>
+    <view class='title-view'>
+      <text class='content-text-title'>使用小秘籍</text>
+      <view class='tag-view'>
+        <image class='img-enjoy' src='../resource/Data-Export.png'></image>
+        <text class='enjoy-num'></text>
+        <image class='img-enjoy' src='../resource/Messaging.png'></image>
+        <text class='enjoy-num'>10</text>
+        <image class='img-enjoy' src='../resource/Heart.png'></image>
+        <text class='enjoy-num'>10</text>
+      </view>
+    </view>
+
+    <view class='line'>
+    </view>
+    <text class='content-text-des'>在使用 ReactNative开发中我们熟练的采用 JavaScript的方式发送请求的方式发送一个请求到服务端</text>
+    <text class='content-text-tag'># 亲子 / 2018-01-22</text>
+  </view>
+
+</view>
