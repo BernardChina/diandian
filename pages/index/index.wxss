@@ -15,7 +15,13 @@
 
 .contentd {
   background-color: #fff;
-  margin-top: 35px;
+}
+.item-title {
+  display: block;
+  font-weight: blod;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .content-block {
@@ -97,6 +103,7 @@
   width: 100%;
   height: 200px;
 }
+
 .videos {
   width: 100%;
   height: 200px;
@@ -114,8 +121,8 @@
 }
 
 .img-enjoy {
-  width: 30px;
-  height: 30px;
+   width: 30px;
+  height: 30px; 
   display: table-cell;
 }
 
@@ -133,4 +140,15 @@
   height: 0.5px;
   margin-left: 15px;
   margin-right: 15px;
+}
+
+.swiper {
+  width: 100%;
+  height: 150px;
+  margin-top: 10px;
+}
+
+.swiper image {
+  height: 100%;
+  width: 100%;
 }
