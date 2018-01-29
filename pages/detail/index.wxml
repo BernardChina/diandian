@@ -47,7 +47,10 @@
 
     <view wx:for="{{commentsModel}}" wx:for-index="idx" wx:for-item="itemName">
       <view class='comment-view'>
-        <image class='comment-avatar' src='{{itemName.avatar}}'></image>
+        <view style='padding:10px;width:30px;display: table-cell'>
+          <image class='comment-avatar' src='{{itemName.avatar}}'></image>
+        </view>
+
         <view class='comment-name-view'>
           <text class='comment-name-text'>{{itemName.name}}</text>
           <text class='comment-name-small-text'>{{idx}}楼 {{itemName.time}}</text>

@@ -173,8 +173,9 @@ page {
 .comment-avatar {
   width: 30px;
   height: 30px;
-  display: table-cell;
-  padding: 10px;
+  border-radius: 50%;
+  /* display: table-cell; */
+  /* padding: 10px; */
 }
 
 .comment-name-view {
