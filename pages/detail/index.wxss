@@ -78,7 +78,7 @@ page {
 }
 
 .img-enjoy {
-  width: 30px;
+  width: 36px;
   height: 30px;
   display: table-cell;
 }
@@ -155,4 +155,54 @@ page {
   margin: 0px;
   width: 170px;
   height: 96px;
+}
+
+.aboutView {
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 15px;
+  width: 10%;
+}
+
+.comment-view {
+  width: 100%;
+  height: 48px;
+  display: table;
+}
+
+.comment-avatar {
+  width: 30px;
+  height: 30px;
+  display: table-cell;
+  padding: 10px;
+}
+
+.comment-name-view {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.comment-name-text {
+  font-size: 11px;
+  color: #999;
+  width: 100%;
+  margin: 0;
+  display: table-row;
+}
+
+.comment-name-small-text {
+  font-size: 8px;
+  color: #999;
+  margin: 0;
+  display: table-row;
+}
+
+.comment-des-view {
+  margin-left: 45px;
+  margin-right: 15px;
+  margin-bottom: 10px;
+}
+
+.comment-des-text {
+  font-size: 12px;
 }

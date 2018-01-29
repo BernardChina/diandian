@@ -13,8 +13,8 @@
         <text class='enjoy-num'>{{propertyModel.loveNum}}</text>
       </view>
     </view>
-    <view class='line'>
-    </view>
+    <!-- <view class='line'>
+    </view> -->
   </view>
   <scroll-view scroll-y class='scrollView-detail'>
     <text class='content-text-des'>{{baseModel.des}}</text>
@@ -22,7 +22,7 @@
     <view class='line'>
     </view>
     <view class='title-view'>
-      <view style='display: table-cell;vertical-align: middle;padding-left:15px;width:10%;'>
+      <view class='aboutView'>
         <image class='img-enjoy' src='../resource/People.png'></image>
       </view>
       <text class='content-text-title-small'>相关视频</text>
@@ -37,7 +37,7 @@
     </scroll-view>
 
     <view class='title-view'>
-      <view style='display: table-cell;vertical-align: middle;padding-left:15px;width:10%;'>
+      <view class='aboutView'>
         <image class='img-enjoy' src='../resource/Message.png'></image>
       </view>
       <text class='content-text-title-small'>相关评论</text>
@@ -46,33 +46,18 @@
     </view>
 
     <view wx:for="{{commentsModel}}" wx:for-index="idx" wx:for-item="itemName">
-      <view style='width:100%;height:48px;display:table;'>
-        <image src='{{itemName.avatar}}' style='width:30px;height:30px; display:table-cell;padding:10px;'></image>
-        <view style='display:table-cell;vertical-align: middle;'>
-          <text style='font-size:11px;color:#999999;width:100%;margin:0;display:table-row;'>{{itemName.name}}</text>
-          <text style='font-size:8px;color:#999999;margin:0;display:table-row;'>{{idx}}楼 {{itemName.time}}</text>
+      <view class='comment-view'>
+        <image class='comment-avatar' src='{{itemName.avatar}}'></image>
+        <view class='comment-name-view'>
+          <text class='comment-name-text'>{{itemName.name}}</text>
+          <text class='comment-name-small-text'>{{idx}}楼 {{itemName.time}}</text>
         </view>
 
       </view>
-      <view style=' margin-left:45px;margin-right:15px;margin-bottom:10px;'>
-        <text style='font-size:12px; '>{{itemName.des}}</text>
+      <view class='comment-des-view'>
+        <text class='comment-des-text'>{{itemName.des}}</text>
       </view>
-      <view class='line'></view>
+      <!-- <view class='line'></view> -->
     </view>
-
-
-    <!-- <view style='width:100%;height:48px;display:table;'>
-      <image src='../resource/Close.png' style='width:30px;height:30px; display:table-cell;padding:10px;'></image>
-      <view style='display:table-cell;vertical-align: middle;'>
-        <text style='font-size:11px;color:#999999;width:100%;margin:0;display:table-row;'>晒衣的交</text>
-        <text style='font-size:8px;color:#999999;margin:0;display:table-row;'>9楼 1小时前</text>
-      </view>
-
-    </view>
-    <view style=' margin-left:45px;margin-right:15px;margin-bottom:10px;'>
-      <text style='font-size:12px; '>你得做些额外工作来让IE6和IE7支持 inline-block 。有些时候人们谈到 inline-block 会触发叫做 hasLayout 的东西，你只需要知道那是用来支持旧浏览器的。如果你对此很感兴趣，可以在前面那个链接中找到更详细的信息。否则我们就继续下去吧</text>
-    </view>
-    <view class='line'></view> -->
-
   </scroll-view>
 </view>

@@ -16,6 +16,7 @@
 .contentd {
   background-color: #fff;
 }
+
 .item-title {
   display: block;
   font-weight: blod;
@@ -121,8 +122,8 @@
 }
 
 .img-enjoy {
-   width: 30px;
-  height: 30px; 
+  width: 36px;
+  height: 30px;
   display: table-cell;
 }
 

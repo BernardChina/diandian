@@ -26,6 +26,12 @@
         "text": "点点聊",
         "iconPath": "pages/resource/chatDisable.png",
         "selectedIconPath": "pages/resource/chatEnable.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "我的",
+        "iconPath": "pages/resource/chatDisable.png",
+        "selectedIconPath": "pages/resource/chatEnable.png"
       }
     ],
     "position": "bottom"
