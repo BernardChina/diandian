@@ -22,9 +22,9 @@
     <view class='line'>
     </view>
     <view class='title-view'>
-      <view class='aboutView'>
+      <!-- <view class='aboutView'>
         <image class='img-enjoy' src='../resource/People.png'></image>
-      </view>
+      </view> -->
       <text class='content-text-title-small'>相关视频</text>
     </view>
     <scroll-view scroll-x class='scrollView-detail-x'>
@@ -37,9 +37,9 @@
     </scroll-view>
 
     <view class='title-view'>
-      <view class='aboutView'>
+      <!-- <view class='aboutView'>
         <image class='img-enjoy' src='../resource/Message.png'></image>
-      </view>
+      </view> -->
       <text class='content-text-title-small'>相关评论</text>
     </view>
     <view class='line'>

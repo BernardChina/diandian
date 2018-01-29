@@ -5,8 +5,6 @@ page {
 }
 
 .detail-body {
-  /* display: flex;
-  flex-direction: column;  */
   min-height: 100%;
 }
 
@@ -44,6 +42,8 @@ page {
   display: table-cell;
   vertical-align: middle;
   color: #333;
+  padding-left: 15px;
+  font-weight: bold;
 }
 
 .content-text-des {
@@ -78,8 +78,7 @@ page {
 }
 
 .img-enjoy {
-  width: 36px;
-  height: 30px;
+  height: 26px; 
   display: table-cell;
 }
 
@@ -110,10 +109,7 @@ page {
   top: 257px;
   bottom: 0;
   box-sizing: border-box;
-  /* height: 70vh; */
   line-height: 2;
-  /* height: 300px;
-  margin-top: 258px; */
 }
 
 .scrollView-detail-x {
@@ -174,8 +170,6 @@ page {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  /* display: table-cell; */
-  /* padding: 10px; */
 }
 
 .comment-name-view {
