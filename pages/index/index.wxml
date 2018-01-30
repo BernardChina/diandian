@@ -6,8 +6,8 @@
 
 <swiper class='swiper' indicator-dots="true" autoplay>
   <block wx:for="{{imgUrls}}">
-    <swiper-item >
-      <image src="{{item}}" mode='widthFix' class="slide-image" height="150" width='100%'/>
+    <swiper-item>
+      <image src="{{item}}" mode='widthFix' class="slide-image" height="150" width='100%' />
     </swiper-item>
   </block>
 </swiper>
@@ -17,11 +17,13 @@
 <view class='contentd'>
   <view wx:for="{{videosModel}}" wx:for-index="idx" wx:for-item="itemName" bindtap='goToDetail' class='content-block'>
     <view class='content-img-view' catchtap='videoTap'>
-      <!-- <view class='content-conver-view'>
+      <view hidden="{{itemName.isPlaying}}">
+        <view class='content-conver-view'>
+        </view>
+        <image id='{{idx}}' class='content-cover-img' src='../resource/MediaPlay.png' bindtap="playVieo"></image>
+        <image class='img' src='{{itemName.poster}}' mode='widthFix'></image>
       </view>
-      <image class='content-cover-img' src='../resource/MediaPlay.png'></image> -->
-      <!-- <image class='img' src='{{itemName.poster}}' mode='widthFix'></image> -->
-      <video class='videos' id="myVideo" src="{{itemName.src}}" poster="{{itemName.poster}}" controls></video>
+      <video wx:if="{{itemName.isPlaying}}" class='videos' id="myVideo_{{idx}}" src="{{itemName.src}}" autoplay controls></video>
     </view>
     <view class='title-view'>
       <text class='content-text-title'>{{itemName.title}}</text>

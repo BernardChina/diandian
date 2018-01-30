@@ -11,6 +11,7 @@ Page({
     videosModel: [{
       poster: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003rsKF44GyaSk.jpg?max_age=2592000',
       src: 'http://pic.qiantucdn.com/58pic/video/27/79/47/27794721_11.mp4',
+      isPlaying: false,
       shareNum: '',
       commentNum: '10',
       loveNum: 5,
@@ -21,6 +22,7 @@ Page({
     }, {
       poster: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003rsKF44GyaSk.jpg?max_age=2592000',
       src: 'http://pic.qiantucdn.com/58pic/video/27/79/47/27794721_11.mp4',
+      isPlaying: false,
       shareNum: '',
       commentNum: '10',
       loveNum: 5,
@@ -31,6 +33,7 @@ Page({
     }, {
       poster: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003rsKF44GyaSk.jpg?max_age=2592000',
       src: 'http://pic.qiantucdn.com/58pic/video/27/79/47/27794721_11.mp4',
+      isPlaying: false,
       shareNum: '',
       commentNum: '10',
       loveNum: 5,
@@ -41,6 +44,7 @@ Page({
     }, {
       poster: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003rsKF44GyaSk.jpg?max_age=2592000',
       src: 'http://pic.qiantucdn.com/58pic/video/27/79/47/27794721_11.mp4',
+      isPlaying: false,
       shareNum: '',
       commentNum: '10',
       loveNum: 5,
@@ -73,6 +77,29 @@ Page({
   },
   videoTap: function () {
 
+  },
+  playVieo: function (e) {
+    var index = e.currentTarget.id;
+    for (var i = 0; i < this.data.videosModel.length; ++i) {
+      if (this.data.videosModel[i].isPlaying == true) {
+        var that = this
+        var array = that.data.videosModel
+        array[i].isPlaying = false
+        that.setData({
+          'videosModel': array
+        })
+      }
+    }
+
+    var that = this
+    var array = that.data.videosModel
+    array[index].isPlaying = true
+    that.setData({
+      'videosModel': array
+    })
+    console.log('myVideo_' + index)
+    var videoContext = wx.createVideoContext('myVideo_' + index)
+    videoContext.play()
   }
 
 })
