@@ -30,8 +30,8 @@
       {
         "pagePath": "pages/logs/logs",
         "text": "我的",
-        "iconPath": "pages/resource/chatDisable.png",
-        "selectedIconPath": "pages/resource/chatEnable.png"
+        "iconPath": "pages/resource/User-Profile-Disable.png",
+        "selectedIconPath": "pages/resource/User-Profile-Enable.png"
       }
     ],
     "position": "bottom"
