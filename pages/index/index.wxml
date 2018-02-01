@@ -30,7 +30,7 @@
       <view class='tag-view'>
         <image class='img-enjoy' src='../resource/Data-Export.png'></image>
         <text class='enjoy-num'></text>
-        <image class='img-enjoy' src='../resource/Message.png'></image>
+        <image class='img-enjoy' src='../resource/Message.png' catchtap='showComment'></image>
         <text class='enjoy-num'>{{itemName.commentNum}}</text>
         <image class='img-enjoy' src='../resource/Heart.png'></image>
         <text class='enjoy-num'>{{itemName.loveNum}}</text>
@@ -40,5 +40,35 @@
     </view>
     <text class='content-text-des'>{{itemName.des}}</text>
     <text class='content-text-tag'># {{itemName.tag}} / {{itemName.upTime}}</text>
+  </view>
+</view>
+
+<view class='comment-fixed' hidden="{{hiddenComment}}" bindtap='commemtTap'>
+  <view class='comment-relative'>
+    <view class='title-view'>
+      <text class='content-text-title-small'>相关评论</text>
+      <text  style='display: table-cell;vertical-align: middle;text-align: center'>X</text>
+    </view>
+    <view class='line'>
+    </view>
+    <scroll-view scroll-y class='scrollView-detail'>
+      <view wx:for="{{commentsModel}}" wx:for-index="idx" wx:for-item="itemName">
+        <view class='comment-view'>
+          <view style='padding:10px;width:30px;display: table-cell'>
+            <image class='comment-avatar' src='{{itemName.avatar}}'></image>
+          </view>
+
+          <view class='comment-name-view'>
+            <text class='comment-name-text'>{{itemName.name}}</text>
+            <text class='comment-name-small-text'>{{idx}}楼 {{itemName.time}}</text>
+          </view>
+
+        </view>
+        <view class='comment-des-view'>
+          <text class='comment-des-text'>{{itemName.des}}</text>
+        </view>
+      </view>
+    </scroll-view>
+
   </view>
 </view>

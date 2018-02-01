@@ -152,3 +152,68 @@
   height: 100%;
   width: 100%;
 }
+.content-text-title-small {
+  font-size: 14px;
+  display: table-cell;
+  vertical-align: middle;
+  color: #333;
+  padding-left: 15px;
+  font-weight: bold;
+}
+.comment-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.comment-name-view {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.comment-name-text {
+  font-size: 11px;
+  color: #999;
+  width: 100%;
+  margin: 0;
+  display: table-row;
+}
+
+.comment-name-small-text {
+  font-size: 8px;
+  color: #999;
+  margin: 0;
+  display: table-row;
+}
+
+.comment-des-view {
+  margin-left: 45px;
+  margin-right: 15px;
+  margin-bottom: 10px;
+}
+
+.comment-des-text {
+  font-size: 12px;
+}
+.comment-fixed{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+   background-color:rgba(0,0,0,0.2); 
+}
+.comment-relative{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 250px;
+  background: white;
+}
+.scrollView-detail {
+  width: 100%;
+  position: relative;
+  height: 80%;
+  bottom: 0;
+  box-sizing: border-box;
+  line-height: 2;
+}
