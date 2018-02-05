@@ -68,6 +68,16 @@ Page({
       name: "加内特",
       time: "2018-01-15 8:21",
       des: "我已经退役了"
+    }, {
+      avatar: "https://sfault-image.b0.upaiyun.com/396/549/3965493827-5633475731dab_articlex",
+      name: "加内特1",
+      time: "2018-01-15 8:21",
+      des: "我已经退役了"
+    }, {
+      avatar: "https://sfault-image.b0.upaiyun.com/396/549/3965493827-5633475731dab_articlex",
+      name: "加内特2",
+      time: "2018-01-15 8:21",
+      des: "我已经退役了"
     }],
     hiddenComment: true,
     canScroll: true,
@@ -120,12 +130,12 @@ Page({
     videoContext.play()
   },
   showComment: function (e) {
+    wx.hideTabBar({
+      aniamtion:true
+    })
     console.log(e.detail.y);
     this.setData({
       "hiddenComment": false
-    })
-    this.setData({
-      "canScroll": false
     })
     wx.pageScrollTo({
       scrollTop: e.detail.y - 225,
@@ -133,9 +143,15 @@ Page({
     })
   },
   commemtTap: function () {
+    wx.showTabBar({
+      aniamtion: true
+    })
     this.setData({
       "hiddenComment": true
     })
+  },
+  commentTouchMove: function () {
+    console.log("touche move!")
   }
 
 })

@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<scroll-view scroll-y scroll-with-animation style='widthL100%;height:100%;'>
+<view style='width:100%;height:auto;'>
 
   <view class='header'>
     <text class='header-title'>Hi, BernardChina</text>
@@ -14,10 +14,10 @@
     </block>
   </swiper>
 
-  <text class='item-title'>- 智能推荐 -</text>
+  <text class='content-title'>- 智能推荐 -</text>
 
-  <view class='contentd'>
-    <view wx:for="{{videosModel}}" wx:key="*this" wx:for-index="idx" wx:for-item="itemName" bindtap='goToDetail' class='content-block'>
+  <view class='content'>
+    <view wx:for="{{videosModel}}" wx:key="*this" wx:for-index="idx" wx:for-item="itemName" bindtap='goToDetail' class='content-item'>
       <view class='content-img-view' catchtap='videoTap'>
         <view hidden="{{itemName.isPlaying}}">
           <view class='content-conver-view'>
@@ -45,7 +45,7 @@
     </view>
   </view>
 
-  <view class='comment-fixed' hidden="{{hiddenComment}}" bindtap='commemtTap'>
+  <view class='comment-fixed' hidden="{{hiddenComment}}" catchtap='commemtTap' catchtouchmove='commentTouchMove'>
     <view class='comment-relative'>
       <view class='title-view'>
         <text class='content-text-title-small'>相关评论</text>
@@ -53,26 +53,34 @@
       </view>
       <view class='line'>
       </view>
-      <scroll-view scroll-y class='scrollView-detail'>
-        <view wx:for="{{commentsModel}}" wx:key="*this" wx:for-index="idx" wx:for-item="itemName">
-          <view class='comment-view'>
-            <view style='padding:10px;width:30px;display: table-cell'>
-              <image class='comment-avatar' src='{{itemName.avatar}}'></image>
-            </view>
+      <view style='width:100%;height:100%;display: flex;flex-direction: column'>
 
-            <view class='comment-name-view'>
-              <text class='comment-name-text'>{{itemName.name}}</text>
-              <text class='comment-name-small-text'>{{idx}}楼 {{itemName.time}}</text>
-            </view>
+        <view style='background:white;flex: 1;width:100%;position: relative'>
 
-          </view>
-          <view class='comment-des-view'>
-            <text class='comment-des-text'>{{itemName.des}}</text>
-          </view>
+           <scroll-view scroll-y class='scrollView-detail'>
+            <view wx:for="{{commentsModel}}" wx:key="*this" wx:for-index="idx" wx:for-item="itemName">
+              <view class='comment-view'>
+                <view style='padding:10px;width:30px;display: table-cell'>
+                  <image class='comment-avatar' src='{{itemName.avatar}}'></image>
+                </view>
+
+                <view class='comment-name-view'>
+                  <text class='comment-name-text'>{{itemName.name}}</text>
+                  <text class='comment-name-small-text'>{{idx}}楼 {{itemName.time}}</text>
+                </view>
+
+              </view>
+              <view class='comment-des-view'>
+                <text class='comment-des-text'>{{itemName.des}}</text>
+              </view>
+            </view>
+          </scroll-view> 
         </view>
-      </scroll-view>
+        <text class='comment-input'>ffff</text>
+      </view>
+
 
     </view>
   </view>
 
-</scroll-view>
+</view>
