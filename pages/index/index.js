@@ -63,13 +63,14 @@ Page({
       name: "詹姆斯",
       time: "2018-01-15 8:21",
       des: "科比，你老了，打不动了"
-    },{
+    }, {
       avatar: "https://sfault-image.b0.upaiyun.com/396/549/3965493827-5633475731dab_articlex",
       name: "加内特",
       time: "2018-01-15 8:21",
       des: "我已经退役了"
     }],
     hiddenComment: true,
+    canScroll: true,
     animationData: {}
   },
   onLoad: function (option) {
@@ -118,13 +119,20 @@ Page({
     var videoContext = wx.createVideoContext('myVideo_' + index)
     videoContext.play()
   },
-  showComment: function () {
-    
+  showComment: function (e) {
+    console.log(e.detail.y);
     this.setData({
       "hiddenComment": false
     })
+    this.setData({
+      "canScroll": false
+    })
+    wx.pageScrollTo({
+      scrollTop: e.detail.y - 225,
+      duration: 300
+    })
   },
-  commemtTap:function(){
+  commemtTap: function () {
     this.setData({
       "hiddenComment": true
     })

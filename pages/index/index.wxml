@@ -1,74 +1,78 @@
 <!--index.wxml-->
-<view class='header'>
-  <text class='header-title'>Hi, BernardChina</text>
-  <text class='header-des'>欢迎来到xxx</text>
-</view>
+<scroll-view scroll-y scroll-with-animation style='widthL100%;height:100%;'>
 
-<swiper class='swiper' indicator-dots="true" autoplay>
-  <block wx:for="{{imgUrls}}">
-    <swiper-item>
-      <image src="{{item}}" mode='widthFix' class="slide-image" height="150" width='100%' />
-    </swiper-item>
-  </block>
-</swiper>
-
-<text class='item-title'>- 智能推荐 -</text>
-
-<view class='contentd'>
-  <view wx:for="{{videosModel}}" wx:for-index="idx" wx:for-item="itemName" bindtap='goToDetail' class='content-block'>
-    <view class='content-img-view' catchtap='videoTap'>
-      <view hidden="{{itemName.isPlaying}}">
-        <view class='content-conver-view'>
-        </view>
-        <image id='{{idx}}' class='content-cover-img' src='../resource/MediaPlay.png' bindtap="playVieo"></image>
-        <image class='img' src='{{itemName.poster}}' mode='widthFix'></image>
-      </view>
-      <video wx:if="{{itemName.isPlaying}}" class='videos' id="myVideo_{{idx}}" src="{{itemName.src}}" autoplay controls></video>
-    </view>
-    <view class='title-view'>
-      <text class='content-text-title'>{{itemName.title}}</text>
-      <view class='tag-view'>
-        <image class='img-enjoy' src='../resource/Data-Export.png'></image>
-        <text class='enjoy-num'></text>
-        <image class='img-enjoy' src='../resource/Message.png' catchtap='showComment'></image>
-        <text class='enjoy-num'>{{itemName.commentNum}}</text>
-        <image class='img-enjoy' src='../resource/Heart.png'></image>
-        <text class='enjoy-num'>{{itemName.loveNum}}</text>
-      </view>
-    </view>
-    <view class='line'>
-    </view>
-    <text class='content-text-des'>{{itemName.des}}</text>
-    <text class='content-text-tag'># {{itemName.tag}} / {{itemName.upTime}}</text>
+  <view class='header'>
+    <text class='header-title'>Hi, BernardChina</text>
+    <text class='header-des'>欢迎来到xxx</text>
   </view>
-</view>
 
-<view class='comment-fixed' hidden="{{hiddenComment}}" bindtap='commemtTap'>
-  <view class='comment-relative'>
-    <view class='title-view'>
-      <text class='content-text-title-small'>相关评论</text>
-      <text  style='display: table-cell;vertical-align: middle;text-align: center'>X</text>
-    </view>
-    <view class='line'>
-    </view>
-    <scroll-view scroll-y class='scrollView-detail'>
-      <view wx:for="{{commentsModel}}" wx:for-index="idx" wx:for-item="itemName">
-        <view class='comment-view'>
-          <view style='padding:10px;width:30px;display: table-cell'>
-            <image class='comment-avatar' src='{{itemName.avatar}}'></image>
+  <swiper class='swiper' indicator-dots="true" autoplay>
+    <block wx:for="{{imgUrls}}" wx:key="*this">
+      <swiper-item>
+        <image src="{{item}}" mode='widthFix' class="slide-image" height="150" width='100%' />
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <text class='item-title'>- 智能推荐 -</text>
+
+  <view class='contentd'>
+    <view wx:for="{{videosModel}}" wx:key="*this" wx:for-index="idx" wx:for-item="itemName" bindtap='goToDetail' class='content-block'>
+      <view class='content-img-view' catchtap='videoTap'>
+        <view hidden="{{itemName.isPlaying}}">
+          <view class='content-conver-view'>
           </view>
-
-          <view class='comment-name-view'>
-            <text class='comment-name-text'>{{itemName.name}}</text>
-            <text class='comment-name-small-text'>{{idx}}楼 {{itemName.time}}</text>
-          </view>
-
+          <image id='{{idx}}' class='content-cover-img' src='../resource/MediaPlay.png' bindtap="playVieo"></image>
+          <image class='img' src='{{itemName.poster}}' mode='widthFix'></image>
         </view>
-        <view class='comment-des-view'>
-          <text class='comment-des-text'>{{itemName.des}}</text>
+        <video wx:if="{{itemName.isPlaying}}" class='videos' id="myVideo_{{idx}}" src="{{itemName.src}}" autoplay controls></video>
+      </view>
+      <view class='title-view'>
+        <text class='content-text-title'>{{itemName.title}}</text>
+        <view class='tag-view'>
+          <image class='img-enjoy' src='../resource/Data-Export.png'></image>
+          <text class='enjoy-num'></text>
+          <image class='img-enjoy' src='../resource/Message.png' catchtap='showComment'></image>
+          <text class='enjoy-num'>{{itemName.commentNum}}</text>
+          <image class='img-enjoy' src='../resource/Heart.png'></image>
+          <text class='enjoy-num'>{{itemName.loveNum}}</text>
         </view>
       </view>
-    </scroll-view>
-
+      <view class='line'>
+      </view>
+      <text class='content-text-des'>{{itemName.des}}</text>
+      <text class='content-text-tag'># {{itemName.tag}} / {{itemName.upTime}}</text>
+    </view>
   </view>
-</view>
+
+  <view class='comment-fixed' hidden="{{hiddenComment}}" bindtap='commemtTap'>
+    <view class='comment-relative'>
+      <view class='title-view'>
+        <text class='content-text-title-small'>相关评论</text>
+        <text style='display: table-cell;vertical-align: middle;text-align: center'>X</text>
+      </view>
+      <view class='line'>
+      </view>
+      <scroll-view scroll-y class='scrollView-detail'>
+        <view wx:for="{{commentsModel}}" wx:key="*this" wx:for-index="idx" wx:for-item="itemName">
+          <view class='comment-view'>
+            <view style='padding:10px;width:30px;display: table-cell'>
+              <image class='comment-avatar' src='{{itemName.avatar}}'></image>
+            </view>
+
+            <view class='comment-name-view'>
+              <text class='comment-name-text'>{{itemName.name}}</text>
+              <text class='comment-name-small-text'>{{idx}}楼 {{itemName.time}}</text>
+            </view>
+
+          </view>
+          <view class='comment-des-view'>
+            <text class='comment-des-text'>{{itemName.des}}</text>
+          </view>
+        </view>
+      </scroll-view>
+
+    </view>
+  </view>
+
+</scroll-view>
