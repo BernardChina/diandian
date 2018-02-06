@@ -80,7 +80,7 @@ Page({
       des: "我已经退役了"
     }],
     hiddenComment: true,
-    canScroll: true,
+    commentHeight: 0,
     animationData: {}
   },
   onLoad: function (option) {
@@ -131,11 +131,15 @@ Page({
   },
   showComment: function (e) {
     wx.hideTabBar({
-      aniamtion:true
+      aniamtion: true
     })
     console.log(e.detail.y);
+    var res = wx.getSystemInfoSync()
+    console.log(res.screenHeight)
+    console.log(res.windowHeight)
     this.setData({
-      "hiddenComment": false
+      "hiddenComment": false,
+      "commentHeight": res.windowHeight - 200
     })
     wx.pageScrollTo({
       scrollTop: e.detail.y - 225,
@@ -149,9 +153,13 @@ Page({
     this.setData({
       "hiddenComment": true
     })
+
   },
   commentTouchMove: function () {
     console.log("touche move!")
+  },
+  commentSubmitTap: function () {
+    console.log('sss');
   }
 
 })
