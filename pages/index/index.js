@@ -81,11 +81,16 @@ Page({
     }],
     hiddenComment: true,
     commentHeight: 0,
+    viewHeight:0,
+    viewHidden:'visible',
     animationData: {}
   },
   onLoad: function (option) {
     console.log('onLoad')
-
+    var res = wx.getSystemInfoSync()
+    this.setData({
+      "viewHeight": '100%'
+    })
   },
   onReady: function () {
     console.log('onReady')
@@ -139,12 +144,20 @@ Page({
     console.log(res.windowHeight)
     this.setData({
       "hiddenComment": false,
-      "commentHeight": res.windowHeight - 200
+      "commentHeight": res.windowHeight - 250
     })
     wx.pageScrollTo({
       scrollTop: e.detail.y - 225,
       duration: 300
     })
+    setTimeout(function () {
+      this.setData({
+        
+        "viewHidden": "hidden"
+      })
+    }.bind(this), 1000)
+    
+    
   },
   commemtTap: function () {
     wx.showTabBar({

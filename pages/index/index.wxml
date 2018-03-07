@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<view style='width:100%;height:auto;'>
+<view  style='width:100%;height:{{viewHeight}};overflow: {{viewHidden}}'>
 
   <view class='header'>
     <text class='header-title'>Hi, BernardChina</text>
@@ -45,7 +45,7 @@
     </view>
   </view>
 
-  <view class='comment-fixed' hidden="{{hiddenComment}}" catchtap='commemtTap' catchtouchmove='commentTouchMove'>
+  <view class='comment-fixed' hidden="{{hiddenComment}}" catchtap='commemtTap' >
     <view class='comment-relative'>
       <view class='title-view'>
         <text class='content-text-title-small'>相关评论</text>
@@ -58,7 +58,7 @@
         <view style='background:white;flex: 2;width:100%;position: relative'>
 
            <scroll-view scroll-y class='scrollView-detail'>
-            <view wx:for="{{commentsModel}}" wx:key="*this" wx:for-index="idx" wx:for-item="itemName">
+            <view wx:for="{{commentsModel}}" wx:key="*this" wx:for-index="idx" wx:for-item="itemName" >
               <view class='comment-view'>
                 <view style='padding:10px;width:30px;display: table-cell'>
                   <image class='comment-avatar' src='{{itemName.avatar}}'></image>
@@ -76,7 +76,7 @@
             </view>
           </scroll-view> 
         </view>
-        <textarea class='comment-input' placeholder='请填写评论...' catchtap='commentSubmitTap' ></textarea>
+         <textarea catchtouchmove='true' class='comment-input' placeholder='请填写评论...' catchtap='commentSubmitTap' ></textarea> 
       </view>
 
 
